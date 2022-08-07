@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -153,14 +153,14 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: $white;
 }
 
 	#logo {
 		margin: 0.75em 0;
 
 		a {
-			color: $white;
+			color: $link-color;
 		}
 	}
 
@@ -184,7 +184,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $link-color;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -195,7 +195,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				color: $link-hover;
 			}
 		}
 
@@ -862,8 +862,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $white;
+	color: $text-color;
 }
 
 	/*

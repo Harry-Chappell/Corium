@@ -351,7 +351,7 @@ body#tinymce.wp-editor {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #000;
   -webkit-font-smoothing: antialiased;
   /*********************
   LINK STYLES
@@ -607,12 +607,12 @@ body#tinymce.wp-editor p {
   font-feature-settings: "liga", "dlig";
 }
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-  color: #f01d4f;
+  color: #00b0d0;
   /* on hover */
   /* on click */
 }
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-  color: #d10e3c;
+  color: #0089a2;
 }
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
@@ -657,7 +657,7 @@ body#tinymce.wp-editor table {
 body#tinymce.wp-editor table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
-  color: #9fa6b4;
+  color: #7d7d7d;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -685,9 +685,9 @@ body#tinymce.wp-editor th:last-child {
 body#tinymce.wp-editor blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
-  border-left: 3px solid #2980b9;
+  border-left: 3px solid #00b0d0;
   font-style: italic;
-  color: #9fa6b4;
+  color: #7d7d7d;
 }
 body#tinymce.wp-editor dd {
   margin-left: 0;

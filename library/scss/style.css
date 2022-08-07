@@ -977,13 +977,13 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, #submit, .comment-reply-link {
-  background-color: #2980b9;
+  background-color: #00b0d0;
 }
 .blue-btn:hover, #submit:hover, .comment-reply-link:hover, .blue-btn:focus, #submit:focus, .comment-reply-link:focus {
-  background-color: #2574a8;
+  background-color: #009fbc;
 }
 .blue-btn:active, #submit:active, .comment-reply-link:active {
-  background-color: #2472a4;
+  background-color: #009ab7;
 }
 
 /******************************************************************
@@ -1029,7 +1029,7 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #000;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1307,8 +1307,8 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
-  background-color: #eaedf2;
+  color: #000;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1364,13 +1364,13 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #00b0d0;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d10e3c;
+  color: #0089a2;
 }
 a:link, a:visited:link {
   /*
@@ -1428,14 +1428,14 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944;
+  background-color: #fff;
 }
 
 #logo {
   margin: 0.75em 0;
 }
 #logo a {
-  color: #fff;
+  color: #00b0d0;
 }
 
 /*********************
@@ -1466,7 +1466,7 @@ and more scalable.
 }
 .nav li a {
   display: block;
-  color: #fff;
+  color: #00b0d0;
   text-decoration: none;
   padding: 0.75em;
   /*
@@ -1475,6 +1475,9 @@ and more scalable.
   the style.scss file where it's relevant. We want to
   keep this file as small as possible!
   */
+}
+.nav li a:hover, .nav li a:focus {
+  color: #0089a2;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1524,7 +1527,7 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #9fa6b4;
+  color: #7d7d7d;
   font-style: italic;
   margin: 0;
 }
@@ -1549,7 +1552,7 @@ POSTS & CONTENT STYLES
 .entry-content table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
-  color: #9fa6b4;
+  color: #7d7d7d;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1577,9 +1580,9 @@ POSTS & CONTENT STYLES
 .entry-content blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
-  border-left: 3px solid #2980b9;
+  border-left: 3px solid #00b0d0;
   font-style: italic;
-  color: #9fa6b4;
+  color: #7d7d7d;
 }
 .entry-content dd {
   margin-left: 0;
@@ -1672,19 +1675,19 @@ PAGE NAVI STYLES
   padding: 0.75em;
   min-width: 1em;
   display: block;
-  color: #2980b9;
+  color: #00b0d0;
 }
 .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-  background-color: #2980b9;
+  background-color: #00b0d0;
   color: #fff;
 }
 .pagination .current {
   cursor: default;
-  color: #5c6b80;
+  color: #000;
 }
 .pagination .current:hover, .pagination .current:focus {
   background-color: #fff;
-  color: #5c6b80;
+  color: #000;
 }
 
 /* end .bones_page_navi */
@@ -1740,7 +1743,7 @@ COMMENT STYLES
   font-style: italic;
 }
 .comment .vcard time a {
-  color: #9fa6b4;
+  color: #7d7d7d;
   text-decoration: none;
 }
 .comment .vcard time a:hover {
@@ -1812,12 +1815,12 @@ COMMENT FORM STYLES
 }
 
 .logged-in-as {
-  color: #9fa6b4;
+  color: #7d7d7d;
   font-style: italic;
   margin: 0;
 }
 .logged-in-as a {
-  color: #5c6b80;
+  color: #000;
 }
 
 .comment-form-comment {
@@ -1873,8 +1876,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa;
+  background-color: #fff;
+  color: #000;
 }
 
 /*
