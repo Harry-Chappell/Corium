@@ -136,8 +136,9 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 39px;
-    margin: 15px 0;
+    margin: 15px 0 30px;
     letter-spacing: -1px;
+	line-height: 1.2;
 }
 
 h4, .h4 {
@@ -391,133 +392,147 @@ POSTS & CONTENT STYLES
 			time {}
 		}
 
-		/* entry content */
-		.entry-content {
-			padding: 1.5em 1.5em 0;
 
-			p {
-				margin: 0 0 1.5em;
-			}
+		p {
+			margin: 0 0 1.5em;
+		}
 
 
-			ul, ol, table, dl {}
+		ul, ol, table, dl {}
 
-			ul, ol {
+		ul, ol {
+			margin: -3px 0 0 15px;
 
-				li {}
+			li {}
 
-			}
+		}
 
-			ul {
+		ul {
 
-				li {}
+			li {
+				margin: 0 0 22px 47px;
+				position: relative;
+				font-size: 0.82em;
 
-			}
-
-			ol {
-
-				li {}
-
-			}
-
-			table {
-				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
-
-				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
-					letter-spacing: 1px;
+				&:before {
+					content: " ";
+					background-image: url(http://localhost:10003/wp-content/uploads/2022/08/tick.png);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					height: 50px;
+					width: 33px;
+					display: block;
+					position: absolute;
+					left: -50px;
+					top: -9px;
 				}
 			}
 
-			tr {
-				border-bottom: 1px solid $gray;
+		}
 
-				&:nth-child(even) {
-					background-color: $light-gray;
-				}
-			}
+		ol {
 
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
+			li {}
 
-				&:last-child {
-					border-right: 0;
-				}
-			}
+		}
 
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
+		table {
+			width: 100%;
+			border: 1px solid $gray;
+			margin-bottom: 1.5em;
 
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
+			caption {
+				margin: 0 0 7px;
+				font-size: 0.75em;
 				color: $meta-gray;
-
-				&:before {}
-
+				text-transform: uppercase;
+				letter-spacing: 1px;
 			}
+		}
 
-			dl {}
+		tr {
+			border-bottom: 1px solid $gray;
 
-			dt {}
-
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: #787878;
-				margin-bottom: 1.5em;
+			&:nth-child(even) {
+				background-color: $light-gray;
 			}
+		}
 
-			img {
-				margin: 0 0 1.5em 0;
-				max-width: 100%;
-				height: auto;
+		td {
+			padding: 7px;
+			border-right: 1px solid $gray;
+
+			&:last-child {
+				border-right: 0;
 			}
+		}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
+		th {
+			background-color: $light-gray;
+			border-bottom: 1px solid $gray;
+			border-right: 1px solid $gray;
 
-			.size-auto,
-			.size-full,
-			.size-large,
-			.size-medium,
-			.size-thumbnail {
-				max-width: 100%;
-				height: auto;
+			&:last-child {
+				border-right: 0;
 			}
+		}
 
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
+		blockquote {
+			margin: 0 0 1.5em 0.75em;
+			padding: 0 0 0 0.75em;
+			border-left: 3px solid $blue;
+			font-style: italic;
+			color: $meta-gray;
 
-		} /* end .entry-content */
+			&:before {}
+
+		}
+
+		dl {}
+
+		dt {}
+
+		dd {
+			margin-left: 0;
+			font-size: 0.9em;
+			color: #787878;
+			margin-bottom: 1.5em;
+		}
+
+		img {
+			// margin: 0 0 1.5em 0;
+			max-width: 100%;
+			height: auto;
+		}
+
+		/*
+		image alignment on a screen this size may be
+		a bit difficult. It's set to start aligning
+		and floating images at the next breakpoint,
+		but it's up to you. Feel free to change it up.
+		*/
+		.alignleft, img.alignleft {}
+		.alignright, img.alignright {}
+		.aligncenter, img.aligncenter {}
+
+		.size-auto,
+		.size-full,
+		.size-large,
+		.size-medium,
+		.size-thumbnail {
+			max-width: 100%;
+			height: auto;
+		}
+
+		pre {
+			background: $black;
+			color: $light-gray;
+			font-size: 0.9em;
+			padding: 1.5em;
+			margin: 0 0 1.5em;
+			border-radius: 3px;
+		}
 
 		.wp-caption {
 			max-width: 100%;

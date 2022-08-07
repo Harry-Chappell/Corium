@@ -879,19 +879,6 @@ them however you see fit.
     width: 8.33%;
   }
 }
-section.hero {
-  height: 893px;
-  background-size: cover;
-  text-align: center;
-  color: white;
-  padding: 100px 0 25px;
-}
-
-section.section-2 {
-  margin: 110px auto;
-  max-width: 670px;
-}
-
 section.text-align-left {
   text-align: left;
 }
@@ -902,6 +889,73 @@ section.text-align-center {
 
 section.text-align-right {
   text-align: right;
+}
+
+section.text-colour-black {
+  color: #323944;
+}
+
+section.text-colour-white {
+  color: #fff;
+}
+
+section.text-colour-yellow {
+  color: #ffcd00;
+}
+
+section.text-colour-blue {
+  color: #00b0d0;
+}
+
+section.text-colour-grey {
+  color: #eaedf2;
+}
+
+section.text-colour-red {
+  color: #cf0001;
+}
+
+section.image-right,
+section.image-left {
+  display: flex;
+  flex-direction: row;
+}
+section.image-right > div,
+section.image-left > div {
+  width: 50%;
+  padding: 30px 65px 0 40px;
+}
+section.image-right > div p,
+section.image-left > div p {
+  margin-left: 15px;
+}
+section.image-right > img,
+section.image-left > img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.image-left {
+  flex-direction: row-reverse;
+}
+
+section.hero {
+  height: 893px;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 100px 0 25px;
+}
+
+section.section-2 {
+  margin: 110px auto 23px;
+  max-width: 670px;
+}
+
+span.meta {
+  font-size: 0.8em;
+  color: #656565;
 }
 
 /*********************
@@ -1460,8 +1514,9 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 39px;
-  margin: 15px 0;
+  margin: 15px 0 30px;
   letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 h4, .h4 {
@@ -1646,83 +1701,108 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #7d7d7d;
+  color: #656565;
   font-style: italic;
   margin: 0;
 }
-/* entry content */
-.entry-content {
-  padding: 1.5em 1.5em 0;
-  /*
-  image alignment on a screen this size may be
-  a bit difficult. It's set to start aligning
-  and floating images at the next breakpoint,
-  but it's up to you. Feel free to change it up.
-  */
-}
-.entry-content p {
+p {
   margin: 0 0 1.5em;
 }
-.entry-content table {
+
+ul, ol {
+  margin: -3px 0 0 15px;
+}
+ul li {
+  margin: 0 0 22px 47px;
+  position: relative;
+  font-size: 0.82em;
+}
+ul li:before {
+  content: " ";
+  background-image: url(http://localhost:10003/wp-content/uploads/2022/08/tick.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 33px;
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: -9px;
+}
+
+table {
   width: 100%;
   border: 1px solid #eaedf2;
   margin-bottom: 1.5em;
 }
-.entry-content table caption {
+table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
-  color: #7d7d7d;
+  color: #656565;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.entry-content tr {
+
+tr {
   border-bottom: 1px solid #eaedf2;
 }
-.entry-content tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #f8f9fa;
 }
-.entry-content td {
+
+td {
   padding: 7px;
   border-right: 1px solid #eaedf2;
 }
-.entry-content td:last-child {
+td:last-child {
   border-right: 0;
 }
-.entry-content th {
+
+th {
   background-color: #f8f9fa;
   border-bottom: 1px solid #eaedf2;
   border-right: 1px solid #eaedf2;
 }
-.entry-content th:last-child {
+th:last-child {
   border-right: 0;
 }
-.entry-content blockquote {
+
+blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
   border-left: 3px solid #00b0d0;
   font-style: italic;
-  color: #7d7d7d;
+  color: #656565;
 }
-.entry-content dd {
+dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-.entry-content img {
-  margin: 0 0 1.5em 0;
+
+img {
   max-width: 100%;
   height: auto;
 }
-.entry-content .size-auto,
-.entry-content .size-full,
-.entry-content .size-large,
-.entry-content .size-medium,
-.entry-content .size-thumbnail {
+
+/*
+image alignment on a screen this size may be
+a bit difficult. It's set to start aligning
+and floating images at the next breakpoint,
+but it's up to you. Feel free to change it up.
+*/
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
   max-width: 100%;
   height: auto;
 }
-.entry-content pre {
+
+pre {
   background: #323944;
   color: #f8f9fa;
   font-size: 0.9em;
@@ -1731,7 +1811,6 @@ POSTS & CONTENT STYLES
   border-radius: 3px;
 }
 
-/* end .entry-content */
 .wp-caption {
   max-width: 100%;
   background: #eee;
@@ -1862,7 +1941,7 @@ COMMENT STYLES
   font-style: italic;
 }
 .comment .vcard time a {
-  color: #7d7d7d;
+  color: #656565;
   text-decoration: none;
 }
 .comment .vcard time a:hover {
@@ -1934,7 +2013,7 @@ COMMENT FORM STYLES
 }
 
 .logged-in-as {
-  color: #7d7d7d;
+  color: #656565;
   font-style: italic;
   margin: 0;
 }
