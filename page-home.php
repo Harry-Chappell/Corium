@@ -36,7 +36,7 @@
 					}; ?>
 				>
 
-					<h2><?php the_field('section_2_title'); ?></h2>
+					<h3><?php the_field('section_2_title'); ?></h3>
 					<?php the_field('section_2_body'); ?>
 
 				</section>
@@ -52,7 +52,7 @@
 					}; ?>
 				>
 
-					<h2><?php the_field('section_3_title'); ?></h2>
+					<h3><?php the_field('section_3_title'); ?></h3>
 					<?php the_field('section_3_body'); ?>
 
 				</section>
@@ -68,7 +68,7 @@
 					}; ?>
 				>
 
-					<h2><?php the_field('section_4_title'); ?></h2>
+					<h3><?php the_field('section_4_title'); ?></h3>
 					<?php the_field('section_4_body'); ?>
 
 				</section>
@@ -84,7 +84,7 @@
 					}; ?>
 				>
 
-					<h2><?php the_field('section_5_title'); ?></h2>
+					<h3><?php the_field('section_5_title'); ?></h3>
 					<?php the_field('section_5_body'); ?>
 
 				</section>
