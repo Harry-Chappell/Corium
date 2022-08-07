@@ -90,7 +90,7 @@
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
-					<a id="hamburger" onclick="mobileMenuToggle()">
+					<a id="hamburger" onclick="mobileMenuToggle()" href="#">
 						<div></div>
 						<div></div>
 						<div></div>
