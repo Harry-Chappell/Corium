@@ -156,13 +156,19 @@ HEADER STYLES
 	background-color: $white;
 }
 
-	#logo {
-		margin: 0.75em 0;
+#logo {
+	margin: 10px 0;
 
-		a {
-			color: $link-color;
-		}
+	a {
+		color: $link-color;
 	}
+
+	img {
+		height: 95px;
+		display: block;
+		margin: auto;
+	}
+}
 
 /*********************
 NAVIGATION STYLES

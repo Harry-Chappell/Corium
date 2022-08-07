@@ -1432,10 +1432,15 @@ HEADER STYLES
 }
 
 #logo {
-  margin: 0.75em 0;
+  margin: 10px 0;
 }
 #logo a {
   color: #00b0d0;
+}
+#logo img {
+  height: 95px;
+  display: block;
+  margin: auto;
 }
 
 /*********************
