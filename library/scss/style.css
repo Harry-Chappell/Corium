@@ -879,6 +879,15 @@ them however you see fit.
     width: 8.33%;
   }
 }
+section.hero {
+  height: 893px;
+  max-height: 100vh;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 100px 0 25px;
+}
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -1060,7 +1069,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #eaedf2;
   transition: background-color 0.24s ease-in-out;
 }
@@ -1328,7 +1337,7 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #000;
@@ -1427,13 +1436,16 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 80px;
   line-height: 1.4em;
-  margin-bottom: 0.375em;
+  margin: 25px 0 10px;
+  letter-spacing: -4px;
 }
 
 h3, .h3 {
-  font-size: 1.125em;
+  font-size: 39px;
+  margin: 10px;
+  letter-spacing: -1px;
 }
 
 h4, .h4 {
@@ -1579,7 +1591,7 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em;
+  margin-top: 15px;
 }
 
 .hentry {
