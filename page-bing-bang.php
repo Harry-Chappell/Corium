@@ -24,10 +24,22 @@
 					<?php 
 
 						// For loop to count to 100
-						for ($i = 1; $i <= 100; $i++) {
-							echo $i . "<br>";
-						}
+						// for ($i = 1; $i <= 100; $i++) {
+						// 	echo $i . "<br>";
+						// }
 
+						// Same thing but as an elseif functino to check for mutiples of 3 and 5.
+						for ($i = 1; $i <= 100; $i++) {
+							if ($i % 3 == 0) {
+								echo "Bing";
+							} elseif ($i % 5 == 0) {
+								echo "Bang";
+							} else {
+								echo $i;
+							}
+							
+							echo "<br>";
+						}
 					?>
 
 				</main>
