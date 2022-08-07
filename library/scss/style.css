@@ -946,36 +946,60 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, #submit, .comment-reply-link {
+.blue-btn, #submit, .comment-reply-link, .white-btn, .yellow-btn, .black-btn {
   display: inline-block;
-  position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
   color: #fff;
-  font-size: 0.9em;
-  font-size: 34px;
   line-height: 34px;
   font-weight: normal;
   padding: 0 24px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   border: 0;
   cursor: pointer;
-  transition: background-color 0.14s ease-in-out;
+  transition: 0.25s;
 }
-.blue-btn:hover, #submit:hover, .comment-reply-link:hover, .blue-btn:focus, #submit:focus, .comment-reply-link:focus {
+.blue-btn:hover, #submit:hover, .comment-reply-link:hover, .white-btn:hover, .yellow-btn:hover, .black-btn:hover, .blue-btn:focus, #submit:focus, .comment-reply-link:focus, .white-btn:focus, .yellow-btn:focus, .black-btn:focus {
   color: #fff;
   text-decoration: none;
   outline: none;
 }
-.blue-btn:active, #submit:active, .comment-reply-link:active {
+.blue-btn:active, #submit:active, .comment-reply-link:active, .white-btn:active, .yellow-btn:active, .black-btn:active {
   top: 1px;
 }
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
+.black-btn {
+  background-color: #323944;
+}
+.black-btn:hover, .black-btn:focus {
+  background-color: #292f38;
+}
+.black-btn:active {
+  background-color: #272d35;
+}
+
+.yellow-btn {
+  background-color: #ffcd00;
+  color: black;
+}
+.yellow-btn:hover, .yellow-btn:focus {
+  background-color: #ebbd00;
+  color: black;
+}
+.yellow-btn:active {
+  background-color: #e6b900;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: black;
+}
+.white-btn:hover, .white-btn:focus {
+  background-color: whitesmoke;
+  color: black;
+}
+.white-btn:active {
+  background-color: #f2f2f2;
+}
+
 .blue-btn, #submit, .comment-reply-link {
   background-color: #00b0d0;
 }

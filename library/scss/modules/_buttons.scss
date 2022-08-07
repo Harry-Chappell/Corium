@@ -26,19 +26,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 %btn {
   display: inline-block;
-  position: relative;
-  font-family: $sans-serif;
-  text-decoration: none;
-  color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
+  color: #fff;
   line-height: 34px;
   font-weight: normal;
   padding: 0 24px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   border: 0;
   cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  transition: 0.25s;
 
   // hovering on the btn
   &:hover, &:focus {
@@ -54,11 +49,63 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 } // end .button
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
+
+// black button
+.black-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($black, 4%);
+  } // end hover
+
+  &:active {
+    background-color: darken($black, 5%);
+  } // end active
+
+} // end black button
+
+
+// yellow button
+.yellow-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $yellow;
+  color: black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($yellow, 4%);
+    color: black;
+  } // end hover
+
+  &:active {
+    background-color: darken($yellow, 5%);
+  } // end active
+
+} // end yellow button
+
+
+// white button
+.white-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $white;
+  color: black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($white, 4%);
+    color: black;
+  } // end hover
+
+  &:active {
+    background-color: darken($white, 5%);
+  } // end active
+
+} // end white button
+
+
+// blue button
 .blue-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $blue;
