@@ -90,11 +90,11 @@
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
-					<div class="hamburger">
+					<a class="hamburger" onclick="hamburger()">
 						<div></div>
 						<div></div>
 						<div></div>
-					</div>
+					</a>
 					<div class="mobile-menu">
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
