@@ -958,6 +958,16 @@ span.meta {
   color: #656565;
 }
 
+section.section-4 {
+  margin: 65px auto;
+  font-size: 0.9em;
+  max-width: 850px;
+  letter-spacing: -0.6px;
+}
+section.section-4 p {
+  margin-bottom: 21px;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If

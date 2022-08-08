@@ -2,24 +2,33 @@
 
 				<div id="inner-footer" class="wrap cf">
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
+					<div class="logos">
+						<img src="/wp-content/uploads/2022/08/wienerberger-logo-min.png" alt="">
+						<img src="/wp-content/uploads/2022/08/Taylor-Maxwell-min.png" alt="">
+					</div>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<div class="contact">
 
+						<?php if( get_field('facebook_link', $homeID) ): ?>
+							<a href="<?php the_field('facebook_link', $homeID); ?>"><i class="fa-brands fa-square-facebook"></i></a>
+						<?php endif; ?>
+						<?php if( get_field('twitter_link', $homeID) ): ?>
+							<a href="<?php the_field('twitter_link', $homeID); ?>"><i class="fa-brands fa-twitter"></i></a>
+						<?php endif; ?>
+						<?php if( get_field('vimeo_link', $homeID) ): ?>
+							<a href="<?php the_field('vimeo_link', $homeID); ?>"><i class="fa-brands fa-square-vimeo"></i></a>
+						<?php endif; ?>
+						<?php if( get_field('twitter_handle', $homeID) ): ?>
+							<a href="https://twitter.com/<?php the_field('twitter_handle', $homeID); ?>">@<?php the_field('twitter_handle', $homeID); ?></a>
+						<?php endif; ?>
+						<?php if( get_field('phone', $homeID) ): ?>
+							<a href="tel:<?php echo str_replace(' ', '', get_field('phone', $homeID)); ?>"><?php the_field('phone', $homeID); ?></a>
+						<?php endif; ?>
+						<?php if( get_field('email', $homeID) ): ?>
+							<a href="mailto:<?php the_field('email', $homeID); ?>"><?php the_field('email', $homeID); ?></a>
+						<?php endif; ?>
+
+					</div>
 				</div>
 
 			</footer>

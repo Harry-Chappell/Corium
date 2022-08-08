@@ -63,8 +63,7 @@
         
         
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+		<script src="https://kit.fontawesome.com/e4c66c7e6d.js" crossorigin="anonymous"></script>
 
         
 		<?php // wordpress head functions ?>
@@ -73,6 +72,10 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
+
+		<!-- Get Home ID for use in Global ACF Fields -->
+		<?php $home_id = get_option('page_on_front'); ?>
+
 
 	</head>
 
