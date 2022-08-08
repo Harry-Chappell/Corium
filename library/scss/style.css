@@ -1211,13 +1211,6 @@ body:not(.admin-bar) .header {
   left: 50px;
 }
 
-body.admin-bar #mobile-menu {
-  padding: 115px 0 0;
-}
-body.admin-bar #mobile-menu img {
-  top: 28px;
-}
-
 /*********************
 NAVIGATION STYLES
 *********************/
