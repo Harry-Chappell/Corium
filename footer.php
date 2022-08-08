@@ -25,7 +25,7 @@
 							<a href="https://twitter.com/<?php the_field('twitter_handle', $home_id); ?>">@<?php the_field('twitter_handle', $home_id); ?></a>
 						<?php endif; ?>
 						<?php if( get_field('phone', $home_id) ): ?>
-							<a href="tel:<?php echo str_replace(' ', '', get_field('phone', $home_id)); ?>"><?php the_field('phone', $home_id); ?></a>
+							<a href="tel:<?php echo str_replace(' ', '', get_field('phone', $home_id)); ?>"><?php echo str_replace(' ', '&nbsp;', get_field('phone', $home_id)); ?></a>
 						<?php endif; ?>
 						<?php if( get_field('email', $home_id) ): ?>
 							<a href="mailto:<?php the_field('email', $home_id); ?>"><?php the_field('email', $home_id); ?></a>

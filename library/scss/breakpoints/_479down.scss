@@ -1,0 +1,47 @@
+.wrap {
+    width: calc(100vw - 20px);
+}
+#logo {
+    justify-content: flex-start;
+}
+#hamburger {
+    right: 10px;
+    top: 6px;
+    padding: 43px 0 52px;
+    width: 37px;
+}
+#hamburger.expanded {
+    right: 10px;
+}
+#mobile-menu {
+    width: 100vw;
+}
+#mobile-menu img {
+    left: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 10px 0 0;
+}
+h3 {
+    font-size: 20px;
+}
+
+section.section-2,
+section.section-4 {
+    margin: 30px auto;
+}
+#content ul li {
+    font-size: 0.6em;
+}
+section.image-right > div, 
+section.image-left > div {
+    padding: 20px 20px 0;
+}
+
+.logos, .contact {
+    flex-flow: row wrap;
+    align-content: center;
+    align-content: space-evenly;
+}
