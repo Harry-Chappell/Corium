@@ -24,6 +24,32 @@ body:not(.admin-bar) .header {
     }
 }
 
+body.admin-bar {
+    #hamburger {
+        top: 38px;
+    }
+    #mobile-menu {
+        padding-top: 152px;
+    
+        img {
+            top: 66px;
+        }
+    }
+
+    @media screen and (max-width: 782px) {
+        #hamburger {
+            top: 52px;
+        }
+        #mobile-menu {
+            padding-top: 166px;
+        
+            img {
+                top: 80px;
+            }
+        }
+    }
+}
+
 h2 {
     font-size: 60px;
 }

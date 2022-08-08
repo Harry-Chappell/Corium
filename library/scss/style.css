@@ -1760,21 +1760,51 @@ FOOTER STYLES
   #mobile-menu img {
     top: 34px;
   }
+  body.admin-bar #hamburger {
+    top: 38px;
+  }
+  body.admin-bar #mobile-menu {
+    padding-top: 152px;
+  }
+  body.admin-bar #mobile-menu img {
+    top: 66px;
+  }
+}
+@media only screen and (max-width: 1023px) and (max-width: 782px) {
+  body.admin-bar #hamburger {
+    top: 52px;
+  }
+  body.admin-bar #mobile-menu {
+    padding-top: 166px;
+  }
+  body.admin-bar #mobile-menu img {
+    top: 80px;
+  }
+}
+@media only screen and (max-width: 1023px) {
   h2 {
     font-size: 60px;
   }
+}
+@media only screen and (max-width: 1023px) {
   h3 {
     font-size: 30px;
     margin: 5px 0 10px;
   }
+}
+@media only screen and (max-width: 1023px) {
   section.hero {
     height: 600px;
     padding: 10px 0 0;
   }
+}
+@media only screen and (max-width: 1023px) {
   section.section-2,
 section.section-4 {
     margin: 50px auto;
   }
+}
+@media only screen and (max-width: 1023px) {
   section.image-left,
 section.image-right {
     flex-direction: column;
@@ -1784,10 +1814,14 @@ section.image-right > img,
 section.image-right > div {
     width: 100%;
   }
+}
+@media only screen and (max-width: 1023px) {
   .logos img {
     max-width: 140px;
     margin-right: 10px;
   }
+}
+@media only screen and (max-width: 1023px) {
   .contact {
     padding: 0 15px;
   }
@@ -1821,6 +1855,7 @@ section.image-right > div {
   }
   #logo {
     justify-content: flex-start;
+    margin: 17px 0;
   }
   #hamburger {
     right: 10px;
