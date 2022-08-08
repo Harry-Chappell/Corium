@@ -1,6 +1,6 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="wrap cf">
+				<div id="inner-footer" class="wrap">
 
 					<div class="logos">
 						<img src="/wp-content/uploads/2022/08/wienerberger-logo-min.png" alt="">
