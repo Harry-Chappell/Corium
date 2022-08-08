@@ -450,4 +450,9 @@ function hoverButtonClass() { ?>
 	add_action('wp_print_footer_scripts', 'hoverButtonClass');
 
 
+
+
+	// add excerpt to pages
+	add_post_type_support( 'page', 'excerpt' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
