@@ -404,5 +404,31 @@ return $classes;
 
 
 
+// Sub-Menu Dropdowns
+
+function mobMenuDropdowns() { ?>
+
+	<script type="text/javascript">
+			
+		jQuery(document).ready(function($) {
+	
+			$("#mobile-menu ul li.menu-item-has-children > a").after('<button class="expander"></button>');
+			$('#mobile-menu ul li button.expander').click(function(e) {
+			$(this).toggleClass("expanded");
+		
+				if ($('#mobile-menu ul li.menu-item-has-children').next('ul.sub-menu').children().length !== 0) {
+					e.preventDefault();
+				}
+		
+			})
+	
+		});
+		
+	</script>
+	<?php
+	
+	}
+	add_action('wp_print_footer_scripts', 'mobMenuDropdowns');
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
