@@ -73,8 +73,6 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
-		<!-- Get Home ID for use in Global ACF Fields -->
-		<?php $home_id = get_option('page_on_front'); ?>
 
 
 	</head>
