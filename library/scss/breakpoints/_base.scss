@@ -244,6 +244,13 @@ HEADER STYLES
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 		transform: translateX(0);
 	}
+
+	img {
+		position: absolute;
+		top: 60px;
+		height: 50px;
+		left: 70px;
+	}
 }
 
 
