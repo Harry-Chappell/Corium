@@ -51,23 +51,6 @@ the whole project.
 @import "partials/home";
 
 /*********************
-IMPORTING MODULES
-Modules are reusable blocks or elements we use throughout the project.
-We can break them up as much as we want or just keep them all in one.
-I mean, you can do whatever you want. The world is your oyster. Unless
-you hate oysters, then the world is your peanut butter & jelly sandwich.
-*********************/
-
-// alert boxes
-@import "modules/alerts";
-
-// buttons
-@import "modules/buttons";
-
-// forms (inputs & labels)
-@import "modules/forms";
-
-/*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
 you set a great foundation, you won't need to add too many styles in
@@ -84,10 +67,10 @@ larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
-
+	
 	// styles in 481up.scss
 	@import "breakpoints/481up";
-
+	
 } // end of media query
 
 /*********************
@@ -100,7 +83,7 @@ you can add resource intensive styles.
 
 	// styles in 768up.scss
 	@import "breakpoints/768up";
-
+	
 } // end of media query
 
 /*********************
@@ -110,10 +93,10 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
-
+	
 	// styles in 1030up.scss
 	@import "breakpoints/1030up";
-
+	
 } // end of media query
 
 /*********************
@@ -121,10 +104,10 @@ LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1210px) {
-
+	
 	// styles in 1210up.scss
 	@import "breakpoints/1210up";
-
+	
 } // end of media query
 
 /*********************
@@ -136,21 +119,39 @@ query for retina AND a certain size if you want. Go Nuts.
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-device-pixel-ratio: 1.5) {
-
-	// styles in 2x.scss
-	@import "breakpoints/2x";
-
-} // end of media query
+		   
+		   // styles in 2x.scss
+		   @import "breakpoints/2x";
+		   
+		} // end of media query
+		
+		/*********************
+		PRINT STYLESHEET
+		Feel free to customize this. Remember to add things that won't make
+		sense to print at the bottom. Things like nav, ads, and forms should
+		be set to display none.
+		*********************/
+		@media print {
+			
+			// styles in print.scss
+			@import "partials/print";
+			
+		}
+		
 
 /*********************
-PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
-@media print {
 
-	// styles in print.scss
-	@import "partials/print";
+// alert boxes
+@import "modules/alerts";
 
-}
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";

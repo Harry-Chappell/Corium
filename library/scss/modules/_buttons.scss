@@ -26,11 +26,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 %btn {
   display: inline-block;
-  color: #fff;
-  line-height: 34px;
+  color: $white;
+  line-height: 50px;
   font-weight: normal;
-  padding: 0 24px;
-  /* border-radius: 4px; */
+  padding: 0 35px;
   border: 0;
   cursor: pointer;
   transition: 0.25s;
@@ -42,6 +41,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     outline: none;
   } // end hover
 
+  &:visited {
+    color: $white;
+  }
+
   // clicking on the button
   &:active {
     top: 1px; // adds a tiny hop to the click
@@ -51,7 +54,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 
 // black button
-.black-btn {
+a.black-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $black;
 
@@ -68,16 +71,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 
 // yellow button
-.yellow-btn {
+a.yellow-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $yellow;
-  color: black;
+  color: $black;
 
   &:hover,
   &:focus {
     background-color: darken($yellow, 4%);
-    color: black;
+    color: $black;
   } // end hover
+
+  &:visited {
+    color: $black;
+  }
 
   &:active {
     background-color: darken($yellow, 5%);
@@ -87,17 +94,21 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 
 // white button
-.white-btn {
+a.white-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $white;
-  color: black;
+  color: $black;
 
   &:hover,
   &:focus {
     background-color: darken($white, 4%);
-    color: black;
+    color: $black;
   } // end hover
 
+  &:visited {
+    color: $black;
+  }
+  
   &:active {
     background-color: darken($white, 5%);
   } // end active
@@ -106,7 +117,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 
 // blue button
-.blue-btn {
+a.blue-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $blue;
 
