@@ -186,18 +186,27 @@ body:not(.admin-bar) .header {
 }
 
 #hamburger {
-    width: 57px;
-    height: 100%;
+	width: 57px;
+    height: 115px;
     padding: 43px 6px 52px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-flow: column;
     cursor: pointer;
-	z-index: 11;
+    z-index: 11;
+    position: absolute;
+    right: calc((100vw - 1218px) / 2 + 40px);
+	top: 32px;
+	transition: 0.25s;
+
+	&.expanded {
+		position: fixed;
+		right: 70px;
+	}
 
 	&> div {
-		background-color: #cf0001;
+		background-color: $red;
 		height: 2px;
 		width: 100%;
 		transition: 0.25s;
@@ -242,7 +251,7 @@ body:not(.admin-bar) .header {
 	box-shadow: 0;
     z-index: 10;
 	transform: translateX(100%);
-	padding: 115px 0 0;
+	padding: 150px 0 0;
 	
 	&.expanded {
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
@@ -251,17 +260,17 @@ body:not(.admin-bar) .header {
 
 	img {
 		position: absolute;
-		top: 28px;
+		top: 60px;
 		height: 50px;
 		left: 70px;
 	}
 }
 
 body.admin-bar #mobile-menu {
-	padding: 150px 0 0;
+	padding: 115px 0 0;
 
 	img {
-		top: 60px;
+		top: 28px;
 	}
 }
 
