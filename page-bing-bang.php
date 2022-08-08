@@ -21,8 +21,30 @@
 
 				<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-					<p>Initial test was just a simple ifelse statement that took 10 minutes. The more advanced version is below and took about a further 20 minutes. If you edit this page you can input attributes into the ACF fields, and the following list of numbers will change accordingly.</p>
+					<p>Initial test was just a simple ifelse statement that took me 10 minutes. The more advanced version is below and took about a further 20 minutes. If you edit this page you can input attributes into the ACF fields, and the following list of numbers will change accordingly.</p>
 					<br>
+
+					<div class="labels">
+
+						<p><strong>First number to replace: </strong>
+						<?php echo the_field('first_no'); ?></p>
+
+						<p><strong>First text to input: </strong>
+						<?php echo the_field('first_text'); ?></p>
+
+						<p><strong>Second number to replace: </strong>
+						<?php echo the_field('second_no'); ?></p>
+
+						<p><strong>Second text to input: </strong>
+						<?php echo the_field('second_text'); ?></p>
+
+						<p><strong>Minimum number to replace from: </strong>
+						<?php echo the_field('min'); ?></p>
+
+						<p><strong>Max number to replace to: </strong>
+						<?php echo the_field('max'); ?></p>
+						<br>
+					</div>
 					
 					<?php 
 
@@ -67,6 +89,21 @@
 						}
 						echo '</div>';
 					?>
+
+					<style>
+						.test-result-cntr {
+							height: 200px;
+							display: flex;
+							flex-flow: column wrap;
+							margin-bottom: 100px;
+						}
+						.labels p,
+						.test-result-cntr p {
+							font-size: 15px;
+							margin: 0;
+							height: 20px;
+						}
+					</style>
 
 				</main>
 
