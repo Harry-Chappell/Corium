@@ -238,6 +238,7 @@ HEADER STYLES
 	box-shadow: 0;
     z-index: 10;
 	transform: translateX(100%);
+	padding: 150px 0 0;
 	
 	&.expanded {
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
@@ -250,6 +251,105 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
+nav {
+	overflow: hidden;
+	ul {
+		margin: 0;
+	}
+
+	li {
+		// padding: 0 25px;
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		
+		&:last-of-type > a, &:last-of-type > button.expander {
+			border-bottom: 2px solid $light-grey;
+		}
+	}
+
+	a, a:visited {
+		padding-left: 25px;
+		background-color: $white;
+		border-top: 2px solid $light-grey;
+		flex: 1;
+		padding: 10px 0 10px 25px;
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+		transition: 0.25s;
+
+		&:hover {
+			color: black;
+			background-color: $light-grey
+		}
+	}
+
+	ul.sub-menu {
+		max-height: 0;
+		transition: 0.5s;
+		overflow: hidden;
+		width: calc(100% + 30px);
+		padding: 0 15px;
+		background-color: rgba(0, 0, 0, 0.03);
+		box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+		margin: 0 -15px;
+
+		a, button.expander {
+			background-color: rgba(255, 255, 255, 0.75);
+
+			&:hover {
+				background-color: $light-grey;
+			}
+		}
+	}
+
+	button.expander {
+		width: 75px;
+		border: 0;
+		background-color: $white;
+		border-top: 2px solid $light-grey;
+		border-left: 2px solid $light-grey;
+		transition: 0.25s;
+		position: relative;
+
+		&:hover {
+			background-color: $light-grey;
+		}
+
+		&:before, &:after {
+			content: " ";
+			background-color: black;
+			width: 10px;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: rotate(45deg) translate(calc(-50% + -2.5px), calc(-50% + 8.5px));
+			transition: 0.25s;
+		}
+
+		&:after {
+			transform: rotate(-45deg) translate(calc(-50% + 1.5px), calc(-50% + -2.5px));
+		}
+
+		&.expanded {
+
+			&:before {
+				transform: rotate(-45deg) translate(calc(-50% + -1.5px), calc(-50% + -8.5px));
+			}
+	
+			&:after {
+				transform: rotate(45deg) translate(calc(-50% + -0.5px), calc(-50% + 3.5px));
+			}
+
+			~ ul.sub-menu {
+				max-height: 1000px;
+				padding: 25px 15px;
+			}
+		}
+	}
+}
 
 
 

@@ -1228,6 +1228,7 @@ HEADER STYLES
   box-shadow: 0;
   z-index: 10;
   transform: translateX(100%);
+  padding: 150px 0 0;
 }
 #mobile-menu.expanded {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
@@ -1237,6 +1238,88 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+nav {
+  overflow: hidden;
+}
+nav ul {
+  margin: 0;
+}
+nav li {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+nav li:last-of-type > a, nav li:last-of-type > button.expander {
+  border-bottom: 2px solid #f6f6f6;
+}
+nav a, nav a:visited {
+  padding-left: 25px;
+  background-color: #fff;
+  border-top: 2px solid #f6f6f6;
+  flex: 1;
+  padding: 10px 0 10px 25px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: 0.25s;
+}
+nav a:hover, nav a:visited:hover {
+  color: black;
+  background-color: #f6f6f6;
+}
+nav ul.sub-menu {
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+  width: calc(100% + 30px);
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 -15px;
+}
+nav ul.sub-menu a, nav ul.sub-menu button.expander {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+nav ul.sub-menu a:hover, nav ul.sub-menu button.expander:hover {
+  background-color: #f6f6f6;
+}
+nav button.expander {
+  width: 75px;
+  border: 0;
+  background-color: #fff;
+  border-top: 2px solid #f6f6f6;
+  border-left: 2px solid #f6f6f6;
+  transition: 0.25s;
+  position: relative;
+}
+nav button.expander:hover {
+  background-color: #f6f6f6;
+}
+nav button.expander:before, nav button.expander:after {
+  content: " ";
+  background-color: black;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(45deg) translate(calc(-50% - 2.5px), calc(-50% + 8.5px));
+  transition: 0.25s;
+}
+nav button.expander:after {
+  transform: rotate(-45deg) translate(calc(-50% + 1.5px), calc(-50% - 2.5px));
+}
+nav button.expander.expanded:before {
+  transform: rotate(-45deg) translate(calc(-50% - 1.5px), calc(-50% - 8.5px));
+}
+nav button.expander.expanded:after {
+  transform: rotate(45deg) translate(calc(-50% - 0.5px), calc(-50% + 3.5px));
+}
+nav button.expander.expanded ~ ul.sub-menu {
+  max-height: 1000px;
+  padding: 25px 15px;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1251,12 +1334,12 @@ POSTS & CONTENT STYLES
   border: 1px solid #ccc;
 }
 .hentry header {
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 1px solid #f6f6f6;
   padding: 1.5em;
 }
 .hentry footer {
   padding: 1.5em;
-  border-top: 1px solid #f8f9fa;
+  border-top: 1px solid #f6f6f6;
 }
 .hentry footer p {
   margin: 0;
@@ -1327,7 +1410,7 @@ tr {
   border-bottom: 1px solid #eaedf2;
 }
 tr:nth-child(even) {
-  background-color: #f8f9fa;
+  background-color: #f6f6f6;
 }
 
 td {
@@ -1339,7 +1422,7 @@ td:last-child {
 }
 
 th {
-  background-color: #f8f9fa;
+  background-color: #f6f6f6;
   border-bottom: 1px solid #eaedf2;
   border-right: 1px solid #eaedf2;
 }
@@ -1383,7 +1466,7 @@ but it's up to you. Feel free to change it up.
 
 pre {
   background: #323944;
-  color: #f8f9fa;
+  color: #f6f6f6;
   font-size: 0.9em;
   padding: 1.5em;
   margin: 0 0 1.5em;
@@ -1484,7 +1567,7 @@ COMMENT STYLES
 #comments-title {
   padding: 0.75em;
   margin: 0;
-  border-top: 1px solid #f8f9fa;
+  border-top: 1px solid #f6f6f6;
   /* number of comments span */
 }
 .commentlist {
@@ -1497,7 +1580,7 @@ COMMENT STYLES
   clear: both;
   overflow: hidden;
   padding: 1.5em;
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 1px solid #f6f6f6;
   /* vcard */
   /* end .commentlist .vcard */
   /* end children */
@@ -1555,7 +1638,7 @@ COMMENT STYLES
   background-color: #fff;
 }
 .comment.even {
-  background: #f8f9fa;
+  background: #f6f6f6;
 }
 /* comment meta */
 /* comment content */
@@ -1584,7 +1667,7 @@ COMMENT FORM STYLES
 ******************************************************************/
 .comment-respond {
   padding: 1.5em;
-  border-top: 1px solid #f8f9fa;
+  border-top: 1px solid #f6f6f6;
 }
 
 #reply-title {
@@ -1606,7 +1689,7 @@ COMMENT FORM STYLES
 
 .form-allowed-tags {
   padding: 1.5em;
-  background-color: #f8f9fa;
+  background-color: #f6f6f6;
   font-size: 0.9em;
 }
 
