@@ -1,0 +1,58 @@
+.wrap {
+    width: calc(100vw - 50px);
+}
+body:not(.admin-bar) .header {
+    margin-top: 0;
+}
+#inner-header {
+    height: 95px;
+}
+#logo {
+    margin: 17px 0;
+}
+#hamburger {
+    right: 20px;
+    top: 6px;
+}
+
+#mobile-menu {
+    padding-top: 120px;
+
+    img {
+        top: 34px;
+    }
+}
+
+h2 {
+    font-size: 60px;
+}
+h3 {
+    font-size: 30px;
+    margin: 5px 0 10px;
+}
+
+section.hero {
+    height: 600px;
+    padding: 10px 0 0;
+}
+section.section-2,
+section.section-4 {
+    margin: 50px auto;
+}
+section.image-left,
+section.image-right {
+    flex-direction: column;
+
+    &> img,
+    &> div {
+        width: 100%;
+    }
+}
+
+.logos img {
+    max-width: 140px;
+    margin-right: 10px;
+}
+.contact {
+    padding: 0 15px;
+}
