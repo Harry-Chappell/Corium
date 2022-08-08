@@ -709,7 +709,7 @@ body#tinymce.wp-editor .size-thumbnail {
   height: auto;
 }
 body#tinymce.wp-editor pre {
-  background: #323944;
+  background: #000;
   color: #f6f6f6;
   font-size: 0.9em;
   padding: 1.5em;

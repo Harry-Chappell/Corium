@@ -931,7 +931,7 @@ section.text-align-right {
 }
 
 section.text-colour-black {
-  color: #323944;
+  color: #000;
 }
 
 section.text-colour-white {
@@ -1429,7 +1429,7 @@ img {
 }
 
 pre {
-  background: #323944;
+  background: #000;
   color: #f6f6f6;
   font-size: 0.9em;
   padding: 1.5em;
@@ -2022,25 +2022,91 @@ a.blue-btn:active, a.comment-reply-link:active, a#submit:active, a.white-btn:act
 }
 
 a.black-btn {
-  background-color: #323944;
+  background-color: #000;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
-a.black-btn:hover, a.black-btn:focus {
-  background-color: #292f38;
+a.black-btn.animate {
+  -webkit-animation-name: black-btn-out;
+          animation-name: black-btn-out;
+}
+a.black-btn.animate:hover, a.black-btn.animate:focus {
+  -webkit-animation-name: black-btn-in;
+          animation-name: black-btn-in;
 }
 a.black-btn:active {
-  background-color: #272d35;
+  background-color: black;
 }
 
+@-webkit-keyframes black-btn-in {
+  0% {
+    background-color: #000;
+    color: #fff;
+  }
+  50% {
+    background-color: #00b0d0;
+    color: #ffcd00;
+  }
+  100% {
+    background-color: #ffcd00;
+    color: #000;
+  }
+}
+
+@keyframes black-btn-in {
+  0% {
+    background-color: #000;
+    color: #fff;
+  }
+  50% {
+    background-color: #00b0d0;
+    color: #ffcd00;
+  }
+  100% {
+    background-color: #ffcd00;
+    color: #000;
+  }
+}
+@-webkit-keyframes black-btn-out {
+  0% {
+    background-color: #ffcd00;
+    color: #000;
+  }
+  50% {
+    background-color: #00b0d0;
+    color: #ffcd00;
+  }
+  100% {
+    background-color: #000;
+    color: #fff;
+  }
+}
+@keyframes black-btn-out {
+  0% {
+    background-color: #ffcd00;
+    color: #000;
+  }
+  50% {
+    background-color: #00b0d0;
+    color: #ffcd00;
+  }
+  100% {
+    background-color: #000;
+    color: #fff;
+  }
+}
 a.yellow-btn {
   background-color: #ffcd00;
-  color: #323944;
+  color: #000;
 }
 a.yellow-btn:hover, a.yellow-btn:focus {
   background-color: #ebbd00;
-  color: #323944;
+  color: #000;
 }
 a.yellow-btn:visited {
-  color: #323944;
+  color: #000;
 }
 a.yellow-btn:active {
   background-color: #e6b900;
@@ -2048,14 +2114,14 @@ a.yellow-btn:active {
 
 a.white-btn {
   background-color: #fff;
-  color: #323944;
+  color: #000;
 }
 a.white-btn:hover, a.white-btn:focus {
   background-color: whitesmoke;
-  color: #323944;
+  color: #000;
 }
 a.white-btn:visited {
-  color: #323944;
+  color: #000;
 }
 a.white-btn:active {
   background-color: #f2f2f2;

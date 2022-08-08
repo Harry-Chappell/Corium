@@ -57,17 +57,55 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 a.black-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $black;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  
+  &.animate {
+    animation-name: black-btn-out;
 
-  &:hover,
-  &:focus {
-    background-color: darken($black, 4%);
-  } // end hover
+    &:hover,
+    &:focus {
+      // background-color: darken($black, 4%);
+      animation-name: black-btn-in;
+    } // end hover
+  }
+  
 
   &:active {
     background-color: darken($black, 5%);
   } // end active
 
 } // end black button
+
+@keyframes black-btn-in {
+  0% {
+    background-color: $black;
+    color: $white;
+  }
+  50% {
+    background-color: $blue;
+    color: $yellow;
+  }
+  100% {
+    background-color: $yellow;
+    color: $black;
+  }
+}
+@keyframes black-btn-out {
+  0% {
+    background-color: $yellow;
+    color: $black;
+  }
+  50% {
+    background-color: $blue;
+    color: $yellow;
+  }
+  100% {
+    background-color: $black;
+    color: $white;
+  }
+}
+
 
 
 // yellow button

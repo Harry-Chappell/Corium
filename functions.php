@@ -431,4 +431,23 @@ function mobMenuDropdowns() { ?>
 	add_action('wp_print_footer_scripts', 'mobMenuDropdowns');
 
 
+// Add animate class to buttons on hover
+
+function hoverButtonClass() { ?>
+
+	<script type="text/javascript">
+			
+		$(".black-btn").hover(
+			function () {
+				$(this).addClass('animate');
+			}
+		);
+		
+	</script>
+	<?php
+	
+	}
+	add_action('wp_print_footer_scripts', 'hoverButtonClass');
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
