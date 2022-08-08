@@ -989,7 +989,7 @@ section.hero {
 }
 
 section.section-2 {
-  margin: 110px auto 23px;
+  margin: 110px auto 100px;
   max-width: 670px;
 }
 
@@ -999,7 +999,7 @@ span.meta {
 }
 
 section.section-4 {
-  margin: 65px auto 7px;
+  margin: 65px auto 59px;
   font-size: 0.9em;
   max-width: 850px;
   letter-spacing: -0.6px;
@@ -1128,8 +1128,8 @@ body:not(.admin-bar) .header {
 }
 
 #logo {
-  margin: 10px 0;
-  flex: 1;
+  margin: 10px auto;
+  width: 360px;
   display: flex;
   justify-content: center;
 }
@@ -1747,7 +1747,8 @@ FOOTER STYLES
     height: 95px;
   }
   #logo {
-    margin: 17px 0;
+    margin: 17px auto;
+    width: 232px;
   }
   #hamburger {
     right: 20px;

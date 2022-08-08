@@ -125,8 +125,8 @@ body:not(.admin-bar) .header {
 }
 
 #logo {
-	margin: 10px 0;
-	flex: 1;
+	margin: 10px auto;
+	width: 360px;
 	display: flex;
 	justify-content: center;
 
