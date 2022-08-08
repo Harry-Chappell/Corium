@@ -26,6 +26,8 @@
 					<h3><?php the_field('hero_subtitle'); ?></h3>
 				</section>
 
+				<!-- If I was using ACF Pro, then the following would be built with repeater fields, and I'd bring them in here using a loop, to prevent the copied sections. I'd copy and edit the code from ACF's documentation: https://www.advancedcustomfields.com/resources/repeater/ -->
+
 				<section class="section-2 
 				text-colour-<?php the_field('section_2_text_colour'); ?> 
 				text-align-<?php the_field('section_2_text_align'); ?>
@@ -37,14 +39,14 @@
 					echo 'style="background-color: ' . get_field('section_2_background_colour') . ';"';
 					}; ?>
 				>
-					<?php if (get_field('section_2_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_2_image_position') != "none") { ?>
 					<div>
 					<?php }; ?>
 
-						<h3><?php the_field('section_2_title'); ?></h3>
+					<?php if( get_field('section_2_title') ): ?><h3><?php the_field('section_2_title'); ?></h3><?php endif; ?>
 						<?php the_field('section_2_body'); ?>
 					
-					<?php if (get_field('section_2_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_2_image_position') != "none") { ?>
 					</div><img src="<?php the_field('section_2_image'); ?>" alt="">
 					<?php }; ?>
 
@@ -61,14 +63,14 @@
 					echo 'style="background-color: ' . get_field('section_3_background_colour') . ';"';
 					}; ?>
 				>
-					<?php if (get_field('section_3_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_3_image_position') != "none") { ?>
 					<div>
 					<?php }; ?>
 
-						<h3><?php the_field('section_3_title'); ?></h3>
+					<?php if( get_field('section_3_title') ): ?><h3><?php the_field('section_3_title'); ?></h3><?php endif; ?>
 						<?php the_field('section_3_body'); ?>
 					
-					<?php if (get_field('section_3_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_3_image_position') != "none") { ?>
 					</div><img src="<?php the_field('section_3_image'); ?>" alt="">
 					<?php }; ?>
 
@@ -83,14 +85,14 @@
 					echo 'style="background-color: ' . get_field('section_4_background_colour') . ';"';
 					}; ?>
 				>
-					<?php if (get_field('section_4_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_4_image_position') != "none") { ?>
 					<div>
 					<?php }; ?>
 
-						<h3><?php the_field('section_4_title'); ?></h3>
+						<?php if( get_field('section_4_title') ): ?><h3><?php the_field('section_4_title'); ?></h3><?php endif; ?>
 						<?php the_field('section_4_body'); ?>
 					
-					<?php if (get_field('section_4_image_position') == "left" || "right") { ?>
+					<?php if (get_field('section_4_image_position') != "none") { ?>
 					</div><img src="<?php the_field('section_4_image'); ?>" alt="">
 					<?php }; ?>
 
